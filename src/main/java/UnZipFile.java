@@ -13,7 +13,6 @@ import java.util.Enumeration;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
-
 @Log4j
 public class UnZipFile {
 
@@ -53,7 +52,7 @@ public class UnZipFile {
             while (zipFileEntries.hasMoreElements()) {
                 ZipEntry entry = zipFileEntries.nextElement();
 
-                UnZipFile.log.info("\tExtracting entry: " + entry);
+                log.info("\tExtracting entry: " + entry);
 
                 //create destination file
                 File destFile = new File(destDirectory, entry.getName());
@@ -76,7 +75,6 @@ public class UnZipFile {
 
                         while ((currentByte = bufIS.read(data, 0, BUFFER_SIZE)) != -1) {
                             bufOS.write(data, 0, currentByte);
-
                         }
                     }
                     // recursively unzip files
