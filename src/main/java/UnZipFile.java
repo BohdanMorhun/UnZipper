@@ -87,8 +87,6 @@ public class UnZipFile {
                                 zipFilePath.length() - ZIP_EXTENSION.length()));
                     }
                 }
-            }
-            if (bufIS != null) {
                 bufIS.close();
             }
             return true;
