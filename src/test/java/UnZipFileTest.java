@@ -1,5 +1,4 @@
-import lombok.extern.log4j.Log4j;
-import org.junit.BeforeClass;
+
 import org.junit.Test;
 
 
@@ -12,13 +11,7 @@ import static junit.framework.TestCase.assertNotNull;
 import static junit.framework.TestCase.assertTrue;
 
 
-@Log4j
 public class UnZipFileTest {
-
-    @BeforeClass
-    public static void startTest(){
-        log.info("start test");
-    }
 
     @Test
     public void testFileExists() {
@@ -35,9 +28,9 @@ public class UnZipFileTest {
         File file = new File(path);
         String absolutePath = file.getAbsolutePath();
 
-        log.info(absolutePath);
+//        log.info(absolutePath);
 
-        assertTrue(absolutePath.endsWith("Java.zip"));
+        assertTrue(absolutePath.endsWith("TaskZip.zip"));
     }
 
     @Test(expected = FileNotFoundException.class)
